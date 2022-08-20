@@ -15,23 +15,30 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/xiaomi/raphael/device.mk)
 
-# Inherit some common VoltageOS stuff.
-$(call inherit-product, vendor/voltage/config/common_full_phone.mk)
+# Inherit some common ProjectBlaze stuff.
+$(call inherit-product, vendor/pixys/config/common_full_phone.mk)
 
-# Official-ify
-VOLTAGE_BUILD_TYPE := OFFICIAL
+# Gapps Config
+BUILD_WITH_GAPPS := true
+TARGET_GAPPS_ARCH := arm64
+
+# Live Wallpaper
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
+
+# Google Recorder
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
 
 # UDFPS animations
 EXTRA_UDFPS_ANIMATIONS := true
 
 # Bootanimation Resolution
-TARGET_BOOT_ANIMATION_RES := 2160
+TARGET_BOOT_ANIMATION_RES := 1080
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := voltage_raphael
+PRODUCT_NAME := pixys_raphael
 PRODUCT_DEVICE := raphael
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := MI 9T Pro
+PRODUCT_MODEL := Redmi K20 Pro
 PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \

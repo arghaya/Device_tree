@@ -683,4 +683,13 @@
         </interface>
         <fqname>@1.0::IMotor/default</fqname>
     </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.google.google_battery</name>
+        <transport>hwbinder</transport>
+        <version>1.2</version>
+        <interface>
+            <name>IGoogleBattery</name>
+            <instance>default</instance>
+         </interface>
+    </hal>
 </manifest>
